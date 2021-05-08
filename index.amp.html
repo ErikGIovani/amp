@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html ⚡ lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="This is the AMP Boilerplate.">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital">
+
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    
+    <link rel="canonical" href="index.html">
+    <link rel="shortcut icon" href="logo.png">
+    <title>Pagina AMP</title>
+    
+    <style amp-custom>
+
+    @media screen and (max-width: 900px) {
+
+      .headerbar {
+        height: 15vw;
+        position: relative;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        background-color: #a298e2;
+      }
+      
+      .site-name {
+        margin: auto;
+        color: #000000;
+        font-size: 10vw;
+        font-family: Tahoma;
+      }
+
+      .hamburger {
+        padding-right: 3vw;
+        font-size: 10vw;
+        color: #000000;
+        font-weight: bolder;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      #sidebar1 {
+        background-color: #a298e2;
+      }
+      
+      .sidebar {
+        padding: 3vw 10vw;
+        margin: 0;
+      }
+      
+      .sidebar > li {
+        list-style: none;
+        margin-bottom: 3vw;
+      }
+      
+      .sidebar a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 8vw;
+        font-family: Tahoma;
+      }
+      
+      .close-sidebar {
+        font-size: 10vw;
+        padding-left: 3vw;
+        font-weight: bolder;
+        color: #000000;
+      }
+
+      .hero {
+        padding: 6vw 2vw 2vw 2vw;
+        background-color: #a298e2;
+      }
+
+      amp-img {
+        margin: 2vw 2vw 7vw 2vw;
+      }
+
+      h1 {
+        display: none;
+      }
+
+      .botones {
+        display: flex;
+        justify-content: center;
+      }
+
+      .boton-1, .boton-2 {
+        font-family: Tahoma;
+        background-color: #e9eaf2;
+        border: none;
+        border-radius: 5vw;
+        font-size: 6vw;
+        margin: 0 3vw;
+        padding: 2vw 0;
+        width: 33%;
+      }
+
+      .contacto {
+        font-size: 10vw;
+        text-align: center;
+        margin: 0;
+        color: #000000;
+        font-family: Tahoma;
+      }
+
+      fieldset {
+        border: none;
+      }
+
+      form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0 8vw;
+      }
+
+      form span {
+        font-size: 5vw;
+        margin: 2vw;
+        color: #000000;
+      } 
+
+      .formulario {
+        border-radius: 3vw;
+        border: none;
+        background-color: #e9eaf2;
+        font-size: 6vw;
+        padding: 2vw;
+        font-family: Tahoma;
+        width: 100%;
+        outline: none;
+      }
+
+      .formulario-btn {
+        color: #000000;
+        border: none;
+        background-color: #e9eaf2;
+        border-radius: 3vw;
+        font-size: 6vw;
+        margin: 0 auto;
+        display: block;
+        padding: 2vw 0;
+        width: 40%;
+        font-family: Tahoma;
+      }
+
+      .footer {
+        background-color: #a298e2;
+      }
+
+      .footer h2 {
+        text-align: center;
+        padding: 0 0 3vw 0;
+        margin: 0;
+        font-size: 4vw;
+        font-family: Tahoma;
+      }
+
+    }
+
+    @media screen and (min-width: 901px) and (max-width: 50000px) {
+
+      .hamburger {
+        display: none;
+      }
+
+      .headerbar {
+        height: 5vw;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #a298e2;
+        font-family: Tahoma;
+      }
+
+      .site-name {
+        color: #000000;
+        font-size: 2.5vw;
+        margin-left: 2vw;
+      }
+
+      .menu a, .menu li {
+        display: inline-block;
+        text-decoration: none;
+        color: #000000;
+        font-size: 2vw;
+        margin: 0 1vw;
+        font-family: Tahoma;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 100%;
+        justify-content: space-around;
+        background-color: #a298e2;
+      }
+
+      amp-img {
+        max-width: 50vw;
+        grid-column: 2;
+        margin: 4vw 2vw 0 2vw;
+      }
+
+      .hero h1 {
+        font-size: 11vw;
+        grid-column: 1;
+        grid-row: 1;
+        text-align: left;
+        margin-left: 6vw;
+        color: #000000;
+        font-family: Tahoma;
+      }
+
+      .botones {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 34vw 0 0 4vw;
+      }
+
+      .boton-1, .boton-2 {
+        border: none;
+        background-color: #e9eaf2;
+        border-radius: 3vw;
+        font-size: 2vw;
+        margin: 0 3vw;
+        padding: 1vw 0;
+        width: 33%;
+        color: #000000;
+        font-family: Tahoma;
+      }
+
+      .boton-1:hover, .boton-2:hover {
+        background-color: #e9eaf2d3;
+      }
+
+      .contacto {
+        font-size: 6vw;
+        text-align: center;
+        margin: 0;
+        color: #000000;
+        font-family: Tahoma;
+      }
+
+      .formulario {
+        border-radius: 3vw;
+        border: none;
+        background-color: #e9eaf2;
+        font-size: 3vw;
+        padding: 1vw;
+        font-family: Tahoma;
+        width: 100%;
+        outline: none;
+      }
+
+      .formulario-btn {
+        color: #000000;
+        border: none;
+        background-color: #e9eaf2;
+        border-radius: 3vw;
+        font-size: 2vw;
+        margin: 0 auto;
+        display: block;
+        padding: 1vw 0;
+        width: 33%;
+        font-family: Tahoma;
+      }
+
+      .formulario-btn:hover {
+        background-color: #e9eaf2d3;
+      }
+
+      fieldset {
+        border: none;
+      }
+
+      form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0 8vw;
+      }
+
+      form span {
+        font-size: 2vw;
+        margin: 1vw;
+        color: #000000;
+      } 
+
+      .footer { 
+        background-color: #a298e2;
+      }
+
+      .footer h2 {
+        margin: 0;
+        padding: 0 0 2vw 0;
+        font-size: 2vw;
+        text-align: center;
+        color: #000000;
+        font-family: Tahoma;
+      }
+
+    }
+
+    </style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+
+    <header class="headerbar">
+      <div class="site-name">AMP Web</div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Acerca De</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">
+        ☰
+      </div>
+    </header>
+
+    <amp-sidebar id="sidebar1" layout="nodisplay" side="right">
+      <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">
+        ✕
+      </div>
+      <ul class="sidebar">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Acerca De</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </amp-sidebar>
+
+    <div class="hero">
+
+      <h1>Hola <br> Mundo</h1>
+
+      <amp-img src="logo.png" alt="Welcome" height="938" width="1000" layout="responsive"></amp-img>
+
+      <div class="botones">
+        <button class="boton-1">Explorar</button>
+
+        <button class="boton-2">Más</button>
+      </div>
+
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#a298e2" fill-opacity="1" d="M0,160L34.3,154.7C68.6,149,137,139,206,133.3C274.3,128,343,128,411,117.3C480,107,549,85,617,80C685.7,75,754,85,823,117.3C891.4,149,960,203,1029,208C1097.1,213,1166,171,1234,144C1302.9,117,1371,107,1406,101.3L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path>
+    </svg>
+
+    <h2 class="contacto">Contacto</h2>
+
+    <form method="post" action-xhr="#" target="_top">
+    <fieldset>
+      <label>
+        <span>Nombre:</span>
+        <br>
+        <input class="formulario" type="text" name="name" placeholder="Nombre" required>
+      </label>
+      <br>
+      <label>
+        <span>Correo:</span>
+        <br>
+        <input class="formulario" type="email" name="email" placeholder="Correo" required>
+      </label>
+      <br>
+      <label>
+        <span>Mensaje:</span>
+        <br>
+        <textarea class="formulario" name="text" rows="5" cols="50" placeholder="Mensaje" required></textarea> 
+      </label>
+      <br>
+      <input class="formulario-btn" type="submit" value="Enviar">
+    </fieldset>
+    <div submit-success>
+      <template type="amp-mustache">
+        Subscription successful!
+      </template>
+    </div>
+    <div submit-error>
+      <template type="amp-mustache">
+        Subscription failed!
+      </template>
+    </div>
+  </form>
+
+  <div class="footer">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1" d="M0,288L48,266.7C96,245,192,203,288,170.7C384,139,480,117,576,144C672,171,768,245,864,250.7C960,256,1056,192,1152,176C1248,160,1344,192,1392,208L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+    </svg>
+
+    <h2>© Sun Zu</h2>
+  </div>
+
+
+  </body>
+</html>
